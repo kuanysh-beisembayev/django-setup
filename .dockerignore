@@ -1,0 +1,3 @@
+venv
+.github
+db.sqlite3
