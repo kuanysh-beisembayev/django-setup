@@ -2,10 +2,12 @@ version: '3.8'
 
 services:
   django:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dev
     environment:
-      SECRET_KEY: 26d9cc0237d3beb9732dfdc6a546a256
       DEBUG: true
+      SECRET_KEY: k$b$wb7mi=!%4n^m!r8h%z$hv*8p=&^^d%x4#saz9v29b6#0ww
       DATABASE_URL: postgres://postgres:postgres@postgres/postgres
     tty: true
     command: python manage.py runserver 0.0.0.0:8000
