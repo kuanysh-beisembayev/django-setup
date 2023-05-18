@@ -12,7 +12,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - '3000:8000'
+      - '8000:8000'
     depends_on:
       postgres:
         condition: service_healthy
@@ -25,4 +25,4 @@ services:
       test: pg_isready -U postgres
       interval: 3s
     ports:
-      - "5432:5432"
+      - '5432:5432'
