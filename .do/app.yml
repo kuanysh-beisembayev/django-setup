@@ -6,4 +6,4 @@ services:
       repo: kuanysh-beisembayev/django-setup
       branch: main
       deploy_on_push: true
-    run_command: python manage.py runserver 0.0.0.0:8000
+    run_command: python manage.py runserver 0.0.0.0:8080
