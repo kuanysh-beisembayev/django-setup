@@ -7,3 +7,12 @@ services:
       branch: main
       deploy_on_push: true
     run_command: python manage.py runserver 0.0.0.0:8080
+
+jobs:
+  - name: migrate
+    kind: PRE_DEPLOY
+    github:
+      repo: kuanysh-beisembayev/django-setup
+      branch: main
+      deploy_on_push: true
+    run_command: python manage.py migrate
