@@ -1,0 +1,9 @@
+name: django-setup
+
+services:
+  - name: server
+    github:
+      repo: kuanysh-beisembayev/django-setup
+      branch: main
+      deploy_on_push: true
+    run_command: python manage.py runserver 0.0.0.0:8000
